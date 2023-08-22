@@ -1,0 +1,6 @@
+java_library(
+    name = "A",
+    srcs = ["A.java"],
+    visibility = ["//visibility:public"],
+)
+

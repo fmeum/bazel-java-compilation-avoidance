@@ -1,6 +1,6 @@
 public class B {
   public static String getPublic() {
-    return A.getPublic() + "\n" + getPrivate();
+    return lib.A.getPublic() + "\n" + getPrivate();
   }
 
   private static String getPrivate() {

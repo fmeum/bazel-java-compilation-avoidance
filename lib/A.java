@@ -1,3 +1,5 @@
+package lib;
+
 public class A {
   public static String getPublic() {
     return getPrivate();
