@@ -1,6 +1,16 @@
 java_library(
     name = "A",
     srcs = ["A.java"],
+    deps = ["A2", "A3"],
     visibility = ["//visibility:public"],
 )
 
+java_library(
+    name = "A2",
+    srcs = ["A2.java"],
+)
+
+java_library(
+    name = "A3",
+    srcs = ["A3.java"],
+)

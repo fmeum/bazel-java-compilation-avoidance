@@ -1,3 +1,5 @@
 common --announce_rc
+common --nojava_header_compilation
 common --experimental_java_classpath=bazel
 common --experimental_strict_java_deps=error
+
