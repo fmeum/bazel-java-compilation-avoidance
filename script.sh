@@ -2,7 +2,7 @@
 
 set -eu
 
-git checkout -- *.java
+git reset --hard
 
 rm -rf disk_cache
 "${BAZEL:-bazel}" --nohome_rc --nosystem_rc clean --expunge
@@ -14,7 +14,9 @@ time=$(date +%s%3N)
 
 echo "=================================================="
 echo "Modify the implementation of a private method in A"
-echo "Only rebuilds A                                   "
+echo "to use another dependency                         "
+echo "                                                  "
+echo "expected: Rebuild only A                          "
 echo "=================================================="
-sed -i -e "s/Hello from A\![0-9]*/Hello from A\!$(date +%s%3N)/g" lib/A.java
-#"${BAZEL:-bazel}" --nohome_rc --nosystem_rc run //:main --disk_cache=$(pwd)/disk_cache --verbose_explanations --explain=explain-Apriv1.txt "$@"
+git apply patches/internal-deps-change.patch
+"${BAZEL:-bazel}" --nohome_rc --nosystem_rc run //:main --disk_cache=$(pwd)/disk_cache --verbose_explanations --explain=patches/internal-deps-change.explain.log "$@"
