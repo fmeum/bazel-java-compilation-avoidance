@@ -23,9 +23,8 @@ run_bazel_with_patch()
 
 
 echo "=================================================="
-echo "Modify the implementation of a private method in A"
-echo "to use another dependency                         "
-echo "                                                  "
-echo "expected: Rebuild only A                          "
+echo "patch: $1  "
 echo "=================================================="
-run_bazel_with_patch internal-deps-change "$@"
+run_bazel_with_patch $@
+
+

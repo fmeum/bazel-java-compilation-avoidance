@@ -1,0 +1,13 @@
+diff --git a/lib/A.java b/lib/A.java
+index b350a94..946330c 100644
+--- a/lib/A.java
++++ b/lib/A.java
+@@ -2,7 +2,7 @@ package lib;
+ 
+ public class A {
+   public static String getPublic() {
+-    return getPrivate();
++    return A2.getPublic();
+   }
+ 
+   private static String getPrivate() {
