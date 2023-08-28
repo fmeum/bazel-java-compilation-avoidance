@@ -1,0 +1,13 @@
+diff --git a/B.java b/B.java
+index b9ad084..3c9e131 100644
+--- a/B.java
++++ b/B.java
+@@ -1,6 +1,7 @@
+ public class B {
+   public static String getPublic() {
+-    return lib.A.getPublic() + "\n" + getPrivate();
++    // return lib.A.getPublic() + "\n" + getPrivate();
++    return getPrivate();
+   }
+ 
+   private static String getPrivate() {
