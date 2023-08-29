@@ -1,0 +1,13 @@
+diff --git a/B.java b/B.java
+index c0fda83..d368697 100644
+--- a/B.java
++++ b/B.java
+@@ -1,6 +1,6 @@
+-public class B extends lib.ABase {
++public class B {
+   public static String getPublic() {
+-    return lib.A.getPublic() + "\n" + getPrivate();
++    return "\n" + getPrivate();
+   }
+ 
+   private static String getPrivate() {
