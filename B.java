@@ -1,4 +1,4 @@
-public class B {
+public class B extends lib.ABase {
   public static String getPublic() {
     return lib.A.getPublic() + "\n" + getPrivate();
   }

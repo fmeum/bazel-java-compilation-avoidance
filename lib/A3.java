@@ -1,11 +1,11 @@
 package lib;
 
-public class A {
+public class A3 {
   public static String getPublic() {
     return getPrivate();
   }
 
   private static String getPrivate() {
-    return A3.getPublic();
+    return "Hello from A3!";
   }
 }
